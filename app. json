@@ -1,0 +1,12 @@
+{
+"expo": {
+"name": "Nyumbani",
+"slug": "nyumbani-accommodation",
+"version": "1.0.0",
+"orientation": "portrait",
+"android": {
+"package": "com.nyumbani.accomodation",
+"versionCode": 1
+}
+}
+}
