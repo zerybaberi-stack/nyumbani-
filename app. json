@@ -7,3 +7,13 @@
     }
   }
 }
+{
+  "expo": {
+    "name": "nyumbani-backend",
+    "slug": "nyumbani-backend",
+    "version": "1.0.0",
+    "android": {
+      "package": "com.yourname.nyumbanibackend"
+    }
+  }
+}
