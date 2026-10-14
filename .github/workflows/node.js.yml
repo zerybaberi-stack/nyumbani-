@@ -1,13 +1,26 @@
-{
-  "expo": {
-    "name": "Nyumbani Accommodation",
-    "slug": "nyumbani-accomodation",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "android": {
-      "package": "com.nyumbani.accommodation",
-      "versionCode": 1
-    }
-  }
-}
+name: Update app.json
 
+on:
+workflow_dispatch:
+push:
+branches:
+- main
+paths:
+- 'app.json'
+- '.github/workflows/node.js.yml'
+
+jobs:
+validate:
+name: Validate Expo configuration
+runs-on: ubuntu-latest
+steps:
+- name: Checkout repository
+uses: actions/checkout@v4
+
+  - name: Set up Node.js
+    uses: actions/setup-node@v4
+    with:
+      node-version: 20
+
+  - name: Check app.json
+    run: node -e "const c = require('./app.json'); if (!c.expo || !c.expo.android || !c.expo.android.package) process.exit(1); console.log('app.json is valid');"
