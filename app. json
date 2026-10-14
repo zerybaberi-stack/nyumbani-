@@ -1,19 +1,11 @@
 {
-  "expo": {
-    "name": "Nyumbani Accomodation",
-    "slug": "nyumbani-accomodation",
-    "android": {
-      "package": "com.zerybaberi.nyumbani"
-    }
-  }
+"expo": {
+"name": "Nyumbani Accommodation",
+"slug": "nyumbani-accomodation",
+"version": "1.0.0",
+"orientation": "portrait",
+"android": {
+"package": "com.nyumbani.accommodation"
 }
-{
-  "expo": {
-    "name": "nyumbani-backend",
-    "slug": "nyumbani-backend",
-    "version": "1.0.0",
-    "android": {
-      "package": "com.yourname.nyumbanibackend"
-    }
-  }
+}
 }
