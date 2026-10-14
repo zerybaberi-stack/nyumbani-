@@ -1,4 +1,4 @@
-name: Update app.json
+name: Validate Nyumbani app.json
 
 on:
 workflow_dispatch:
