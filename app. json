@@ -5,7 +5,8 @@
 "version": "1.0.0",
 "orientation": "portrait",
 "android": {
-"package": "com.nyumbani.accommodation"
+"package": "com.nyumbani.accommodation",
+"versionCode": 1
 }
 }
 }
