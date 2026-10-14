@@ -4,6 +4,10 @@
 "slug": "nyumbani-accomodation",
 "version": "1.0.0",
 "orientation": "portrait",
+"platforms": [
+"android",
+"ios"
+],
 "android": {
 "package": "com.nyumbani.accomodation",
 "versionCode": 1
