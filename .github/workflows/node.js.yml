@@ -1,4 +1,5 @@
-name: Validate Nyumbani app.json
+
+name: Validate Expo configuration
 
 on:
   workflow_dispatch:
@@ -23,5 +24,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Check app.json
-        run: node -e "const c = require('./app.json'); if (!c.expo || !c.expo.android || !c.expo.android.package) process.exit(1); console.log('app.json is valid');"
+      - name: Check app.json exists
+        run: |
+          test -f app.json || {
+            echo "ERROR: app.json is missing from the repository root."
+            echo "Repository files:"
+            ls -la
+            exit 1
+          }
+
+      - name: Validate app.json
+        run: node -e "const fs = require('fs'); const config = JSON.parse(fs.readFileSync('./app.json', 'utf8')); if (!config.expo || !config.expo.android || !config.expo.android.package) throw new Error('Missing Expo Android package'); console.log('app.json is valid'); console.log('Android package:', config.expo.android.package)"
